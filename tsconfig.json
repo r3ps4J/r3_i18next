@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "noImplicitAny": true,
+        "module": "CommonJS",
+        "target": "ES2017",
+        "lib": ["ES2017"],
+        "moduleResolution": "Node16",
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "noEmit": true,
+        "types": ["@citizenfx/client"]
+    }
+}
