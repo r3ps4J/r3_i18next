@@ -18,17 +18,17 @@
   "license": "LGPL-3.0-or-later",
   "private": true,
   "dependencies": {
-    "i18next": "^23.2.8"
+    "i18next": "^23.2.11"
   },
   "devDependencies": {
     "@citizenfx/client": "^2.0.6552-1",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
     "esbuild": "^0.16.17",
-    "eslint": "^8.44.0",
+    "eslint": "^8.45.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.1.6"
   }
 }
