@@ -18,6 +18,7 @@
   "license": "LGPL-3.0-or-later",
   "private": true,
   "dependencies": {
+    "@r3ps4j/i18next-cfx-backend": "github:r3ps4j/i18next-cfx-backend",
     "@r3ps4j/i18next-cfx-language-detector": "github:r3ps4j/i18next-cfx-language-detector",
     "i18next": "^23.3.0"
   },
