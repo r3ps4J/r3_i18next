@@ -1,6 +1,6 @@
 import i18next, { Callback, InitOptions, i18n } from "i18next";
-import Backend from "@r3ps4j/i18next-cfx-backend";
-import LanguageDetector from "@r3ps4j/i18next-cfx-language-detector";
+import Backend from "@r3ps4j/i18next-fxserver-backend";
+import LanguageDetector from "@r3ps4j/i18next-fxserver-language-detector";
 
 const exports = globalThis.exports;
 

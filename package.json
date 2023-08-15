@@ -1,5 +1,5 @@
 {
-  "name": "@r3ps4j/cfx-i18next",
+  "name": "r3_i18next",
   "version": "1.0.0",
   "description": "i18next wrapper for FXServer",
   "main": "lib/index.js",
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/r3ps4J/cfx-i18next.git"
+    "url": "git+https://github.com/r3ps4J/r3_i18next.git"
   },
   "author": "r3ps4J",
   "license": "LGPL-3.0-or-later",
   "private": true,
   "dependencies": {
-    "@r3ps4j/i18next-cfx-backend": "^1.0.0",
-    "@r3ps4j/i18next-cfx-language-detector": "^1.0.0",
+    "@r3ps4j/i18next-fxserver-backend": "^1.0.0",
+    "@r3ps4j/i18next-fxserver-language-detector": "^1.0.0",
     "cross-fetch": "^4.0.0",
     "i18next": "^23.4.4"
   },

@@ -1,13 +1,13 @@
-# cfx-i18next
+# r3_i18next
 
-![](https://img.shields.io/github/downloads/r3ps4J/cfx-i18next/total?logo=github)
-![](https://img.shields.io/github/downloads/r3ps4J/cfx-i18next/latest/total?logo=github)
-![](https://img.shields.io/github/contributors/r3ps4J/cfx-i18next?logo=github)
-![](https://img.shields.io/github/v/release/r3ps4J/cfx-i18next?logo=github) 
+![](https://img.shields.io/github/downloads/r3ps4J/r3_i18next/total?logo=github)
+![](https://img.shields.io/github/downloads/r3ps4J/r3_i18next/latest/total?logo=github)
+![](https://img.shields.io/github/contributors/r3ps4J/r3_i18next?logo=github)
+![](https://img.shields.io/github/v/release/r3ps4J/r3_i18next?logo=github) 
 
 This is a wrapper resource for the popular internationalization framework i18next. This resource provides exports allowing you to create new i18next instances for use in other resources.
 
-![cfx-i18next](/assets/cfx-i18next_slim.png)
+![r3_i18next](/assets/r3_i18next-slim.png)
 
 i18next provides a wide range of features, such as:
 
@@ -20,52 +20,52 @@ For more information about i18next, check out their documentation on [www.i18nex
 
 ## Download
 
-https://github.com/r3ps4J/cfx-i18next/releases/latest/download/cfx-i18next.zip
+https://github.com/r3ps4J/r3_i18next/releases/latest/download/r3_i18next.zip
 
 ## Usage
 
-Follow this guide to get your resource set-up for using cfx-i18next.
+Follow this guide to get your resource set-up for using r3_i18next.
 
 If you plan on using this in a Javascript or Typescript resource, it is recommended to install i18next directly. If you wish to make use of the modules that this wrapper can provide please take a look at the repositories of these modules and install them directly as well.
 
 Modules used:
- - Language detector: [@r3ps4j/i18next-cfx-language-detector](https://github.com/r3ps4J/i18next-cfx-language-detector)
- - Backend: [@r3ps4j/i18next-cfx-backend](https://github.com/r3ps4J/i18next-cfx-backend)
+ - Language detector: [@r3ps4j/i18next-fxserver-language-detector](https://github.com/r3ps4J/i18next-fxserver-language-detector)
+ - Backend: [@r3ps4j/i18next-fxserver-backend](https://github.com/r3ps4J/i18next-fxserver-backend)
 
-### Mark as cfx-i18next as a dependency
+### Mark as r3_i18next as a dependency
 
-The first step to using cfx-i18next is to mark it as a dependency in the manifest of the resource in which you plan on using it. This will ensure that cfx-i18next is started before your resource, preventing the "No such export x in resource cfx-i18next" error from occurring.
+The first step to using r3_i18next is to mark it as a dependency in the manifest of the resource in which you plan on using it. This will ensure that r3_i18next is started before your resource, preventing the "No such export x in resource r3_i18next" error from occurring.
 
-Mark cfx-i18next as a dependency in `fxmanifest.lua`:
+Mark r3_i18next as a dependency in `fxmanifest.lua`:
 
 ```lua
 -- fxmanifest.lua
-dependency "cfx-i18next"
+dependency "r3_i18next"
 
 -- Or as an array
 dependencies {
-    "cfx-i18next",
+    "r3_i18next",
 }
 ```
 
 ### Creating an instance
 
-The next step to start using cfx-i18next is to create a new i18next instance. You can do this by calling the `createInstance` or `createInstanceWithPlugins` export. These exports are available on both the server and client side.
+The next step to start using r3_i18next is to create a new i18next instance. You can do this by calling the `createInstance` or `createInstanceWithPlugins` export. These exports are available on both the server and client side.
 
 Create a new instance:
 ```lua
-i18next = exports["cfx-i18next"]:createInstance()
+i18next = exports["r3_i18next"]:createInstance()
 ```
 
-Because `i18next.use` does not work on an instance created through exports, the `createInstanceWithPlugins` is provided as well. By default this export will provide the [@r3ps4j/i18next-cfx-language-detector](https://github.com/r3ps4J/i18next-cfx-language-detector) and [@r3ps4j/i18next-cfx-backend](https://github.com/r3ps4J/i18next-cfx-backend) modules, but this can be altered by providing the list of modules as a paramter to the export.
+Because `i18next.use` does not work on an instance created through exports, the `createInstanceWithPlugins` is provided as well. By default this export will provide the [@r3ps4j/i18next-fxserver-language-detector](https://github.com/r3ps4J/i18next-fxserver-language-detector) and [@r3ps4j/i18next-fxserver-backend](https://github.com/r3ps4J/i18next-fxserver-backend) modules, but this can be altered by providing the list of modules as a paramter to the export.
 
 Create a new instance with platform specific modules:
 ```lua
 -- Default instance with platform specific modules
-i18next = exports["cfx-i18next"]:createInstanceWithPlugins()
+i18next = exports["r3_i18next"]:createInstanceWithPlugins()
 
 -- Specify modules
-i18next = exports["cfx-i18next"]:createInstanceWithPlugins({"language-detector", "backend"})
+i18next = exports["r3_i18next"]:createInstanceWithPlugins({"language-detector", "backend"})
 ```
 
 ### Initialization
@@ -77,7 +77,7 @@ After creating the instance you will have to initialize it, during this you will
 This is a basic sample showing only the basic usage of i18next core functionality (`print` is just done to show how it works).
 
 ```lua
-i18next = exports["cfx-i18next"]:createInstance()
+i18next = exports["r3_i18next"]:createInstance()
 
 i18next.init({
     lng = "en", -- if you're using a language detector, do not define the lng option
@@ -99,7 +99,7 @@ print(i18next.t('key'))
 Or using callback init signature:
 
 ```lua
-i18next = exports["cfx-i18next"]:createInstance()
+i18next = exports["r3_i18next"]:createInstance()
 
 i18next.init({
     lng = "en", -- if you're using a language detector, do not define the lng option
@@ -127,12 +127,12 @@ As indicated earlier, this wrapper provides some platform specific modules for u
 
 ### Language detector
 
-The [language detector module](https://github.com/r3ps4J/i18next-cfx-language-detector) looks at convars to determine what language should be used to translate keys. By default it will look at the "i18next_lng" convar, but this can be changed in the detector options. If the convar is not found or empty, it will resort to the "locale" convar. This convar should already be set to specify the server language in the server list.
+The [language detector module](https://github.com/r3ps4J/i18next-fxserver-language-detector) looks at convars to determine what language should be used to translate keys. By default it will look at the "i18next_lng" convar, but this can be changed in the detector options. If the convar is not found or empty, it will resort to the "locale" convar. This convar should already be set to specify the server language in the server list.
 
 #### Basic sample with language detector:
 
 ```lua
-i18next = exports["cfx-i18next"]:createInstanceWithPlugins({"language-detector"})
+i18next = exports["r3_i18next"]:createInstanceWithPlugins({"language-detector"})
 
 i18next.init({
     fallbackLng = "en",
@@ -154,14 +154,14 @@ i18next.init({
 print(i18next.t('key'))
 ```
 
-For more information about the language detector, check out [@r3ps4j/i18next-cfx-language-detector](https://github.com/r3ps4J/i18next-cfx-language-detector).
+For more information about the language detector, check out [@r3ps4j/i18next-fxserver-language-detector](https://github.com/r3ps4J/i18next-fxserver-language-detector).
 
 ### Backend
 
-The [backend module](https://github.com/r3ps4J/i18next-cfx-language-detector) loads resources from the files of the invoking resource using the `LoadResourceFile` native. By default it will load files using the "/locales/{{lng}}/{{ns}}.json" loadpath, but this path can be changed in the backend options.
+The [backend module](https://github.com/r3ps4J/i18next-fxserver-language-detector) loads resources from the files of the invoking resource using the `LoadResourceFile` native. By default it will load files using the "/locales/{{lng}}/{{ns}}.json" loadpath, but this path can be changed in the backend options.
 
 ```lua
-i18next = exports["cfx-i18next"]:createInstanceWithPlugins({"backend"})
+i18next = exports["r3_i18next"]:createInstanceWithPlugins({"backend"})
 
 i18next.init({
     lng = "en", -- if you're using a language detector, do not define the lng option
@@ -187,11 +187,11 @@ files {
 }
 ```
 
-For more information about the backend, check out [@r3ps4j/i18next-cfx-backend](https://github.com/r3ps4J/i18next-cfx-backend).
+For more information about the backend, check out [@r3ps4j/i18next-fxserver-backend](https://github.com/r3ps4J/i18next-fxserver-backend).
 
 ## Full example
 ```lua
-i18next = exports["cfx-i18next"].createInstanceWithPlugins()
+i18next = exports["r3_i18next"].createInstanceWithPlugins()
 
 i18next.init({
     fallbackLng = "en",
