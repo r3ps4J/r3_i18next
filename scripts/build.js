@@ -1,7 +1,7 @@
 const { build } = require("esbuild");
 const yargs = require("yargs");
 
-const argv = yargs(process.argv).argv
+const argv = yargs(process.argv).argv;
 
 const targets = [
     {
@@ -13,7 +13,7 @@ const targets = [
         entryPoints: ["./src/versioncheck.ts"],
         outfile: "./dist/versioncheck.js",
         target: "node16",
-        platform: "node"
+        platform: "node",
     },
 ];
 
