@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "esbuild src/index.ts --outfile=dist/index.js --bundle --target=es2017",
+    "build": "node scripts/build.js",
     "watch": "npm run build -- --watch",
     "format": "prettier --write \"src/**/*.{ts,js}\"",
     "lint": "eslint \"src/**/*.{ts,js}\""
@@ -20,6 +20,7 @@
   "dependencies": {
     "@r3ps4j/i18next-cfx-backend": "^1.0.0",
     "@r3ps4j/i18next-cfx-language-detector": "^1.0.0",
+    "cross-fetch": "^4.0.0",
     "i18next": "^23.4.4"
   },
   "devDependencies": {
@@ -31,6 +32,7 @@
     "eslint-config-prettier": "^8.10.0",
     "eslint-plugin-prettier": "^5.0.0",
     "prettier": "^3.0.1",
-    "typescript": "^5.1.6"
+    "typescript": "^5.1.6",
+    "yargs": "^17.7.2"
   }
 }
