@@ -7,6 +7,8 @@
 
 This is a wrapper resource for the popular internationalization framework i18next. This resource provides exports allowing you to create new i18next instances for use in other resources.
 
+![cfx-i18next](/assets/cfx-i18next_slim.png)
+
 i18next provides a wide range of features, such as:
 
 - Proper [pluralizations](https://www.i18next.com/translation-function/plurals)
